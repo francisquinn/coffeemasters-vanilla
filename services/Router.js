@@ -12,17 +12,17 @@ const Router = {
             Router.go(event.state.route, false);
         });
         // check initial url
-        console.log(location.pathname)
         Router.go(location.pathname);
     },
     go: (route, addToHistory = true) => {
-        console.log(`go to ${route}`)
 
         if (addToHistory) {
             history.pushState({ route }, null, route);
         }
 
         let pageElement = null;
+
+        console.log(route)
 
         switch (route) {
             case '/':
@@ -32,10 +32,10 @@ const Router = {
                 pageElement = document.createElement('order-page');
                 break;
             default:
-                if (route.startsWith('product-')) {
+                if (route.startsWith('/product-')) {
                     pageElement = document.createElement('details-page');
-                    const paramId = route.substring(route.lastIndexOf('-') = 1);
-                    pageElement.dataset.id = paramId;
+                    const paramId = route.substring(route.lastIndexOf('-') + 1);
+                    pageElement.dataset.productId = paramId;
                 }
         }
 
