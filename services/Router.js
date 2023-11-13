@@ -22,8 +22,6 @@ const Router = {
 
         let pageElement = null;
 
-        console.log(route)
-
         switch (route) {
             case '/':
                 pageElement = document.createElement('menu-page');

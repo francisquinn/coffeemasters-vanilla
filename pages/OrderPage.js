@@ -16,7 +16,7 @@ export class OrderPage extends HTMLElement {
         this.root.appendChild(section);
   
         async function loadCSS() {
-          const request = await fetch("/components/OrderPage.css");
+          const request = await fetch("/styles/OrderPage.css");
           styles.textContent = await request.text();
         }
         loadCSS();

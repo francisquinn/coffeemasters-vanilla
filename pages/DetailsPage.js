@@ -15,7 +15,7 @@ export class DetailsPage extends HTMLElement {
         this.root.appendChild(styles);
 
         async function loadCSS() {
-          const request = await fetch("/components/DetailsPage.css");
+          const request = await fetch("/styles/DetailsPage.css");
           styles.textContent = await request.text();
         }
         loadCSS();

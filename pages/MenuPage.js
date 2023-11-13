@@ -7,7 +7,7 @@ export class MenuPage extends HTMLElement {
         this.root.appendChild(styles);
 
         async function loadCSS() {
-            const request = await fetch('/components/MenuPage.css');
+            const request = await fetch('/styles/MenuPage.css');
             const css = await request.text();
             styles.textContent = css;
         }
@@ -46,7 +46,7 @@ export class MenuPage extends HTMLElement {
                 })
             }
         } else {
-            this.root.querySelector('menu').innerHTML = 'Loading...';
+            this.root.querySelector('#menu').innerHTML = 'Loading...';
         }
 
         

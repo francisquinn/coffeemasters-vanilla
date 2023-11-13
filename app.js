@@ -4,9 +4,9 @@ import { loadData } from "./services/Menu.js";
 import Router from "./services/Router.js";
 
 // Link web components
-import { MenuPage } from "./components/MenuPage.js";
-import { DetailsPage } from './components/DetailsPage.js';
-import { OrderPage } from './components/OrderPage.js';
+import { MenuPage } from "./pages/MenuPage.js";
+import { DetailsPage } from './pages/DetailsPage.js';
+import { OrderPage } from './pages/OrderPage.js';
 import ProductItem from "./components/ProductItem.js";
 import CartItem from "./components/CartItem.js";
 
